@@ -1,5 +1,5 @@
 FROM python:3.10
-WORKDIR /app
+WORKDIR /python-app
 COPY . .
 RUN pip install flask
 CMD ["python", "app.py"]
