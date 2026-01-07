@@ -12,10 +12,10 @@ pipeline {
       }
     }
    stage('Push Image') {
-    steps {
-        withCredentials([usernamePassword(credentialsId: 'dockerhub-pass', usernameVariable: 'krizrepo', passwordVariable: 'Kris@2026')]) {
-            sh 'echo $PASS | docker login -u $USER --password-stdin'
-            sh 'docker push krizrepo/student-app'
+      steps {
+        withCredentials([usernamePassword(credentialsId: 'dockerhub-pass', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+          sh 'echo $PASS | docker login -u $USER --password-stdin'
+          sh 'docker push krizrepo/student-app'
         }
       }
     }
