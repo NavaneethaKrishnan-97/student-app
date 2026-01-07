@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Clone') {
       steps {
-        git url:'https://github.com/<your-username>/student-app.git', branch: 'master'
+        git url:'https://github.com/NavaneethaKrishnan-97/student-app.git', branch: 'master'
       }
     }
     stage('Build Image') {
